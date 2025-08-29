@@ -1,0 +1,69 @@
+/* Estilos originales */
+.resumen-evaluacion {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: #f9f9f9;
+}
+
+.resumen-evaluacion p {
+  margin-bottom: 0.5rem;
+}
+
+/* Nuevos estilos para el diseño moderno */
+.resumen-evaluacion-moderno {
+  background-color: #f8f9fa;
+  border: 1px solid #e3e6f0;
+  border-radius: .35rem;
+  padding: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.info-item i {
+  color: #4e73df;
+  width: 20px;
+  text-align: center;
+}
+
+.info-item strong {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+.nota-visual {
+    width: 140px;
+    height: 140px;
+    background-color: #0059c8; /* azul similar al de la imagen */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,.2);
+    text-align: center;
+    line-height: 1.1;
+    padding: 0;
+  }
+
+  .custom-table {
+    /* Add custom styles for the table here if needed */
+    font-size: 0.7rem; /* Adjust this value as needed */
+  }
+
+  .texto-detalle-uniforme {
+    font-size: 0.9rem;
+  }
+
+  /* Agregamos el estilo para el h5 dentro de .card-header */
+  .card-header h5 {
+    color: white !important; /* Usamos !important para asegurar la anulación */
+  }

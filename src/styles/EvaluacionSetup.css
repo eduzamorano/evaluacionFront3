@@ -1,0 +1,175 @@
+/* Fondo principal */
+.evaluacion-setup-bg {
+  background: linear-gradient(120deg, #f8fafc 60%, #e2efd9 100%);
+}
+
+/* Modal */
+.vue-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 62, 80, 0.35);
+  z-index: 1040;
+}
+.vue-modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+  background: #fff;
+  border-radius: 12px;
+  min-width: 200px;
+  /*max-width: 600px;*/
+  /* min-height: 400px; */
+  box-shadow: 0 8px 32px 0 rgba(44,62,80,0.18);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Filas de formulario en línea */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.form-label-inline {
+  min-width: 160px;
+  margin-bottom: 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.form-input-inline {
+  flex: 1 1 0%;
+}
+
+/* Switch personalizado */
+.toggle-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 32px;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #e5e5e5;
+  border: 2px solid #aaa;
+  border-radius: 20px;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.slider .label-yes {
+  color: #fff;
+  z-index: 2;
+  transition: color 0.3s;
+}
+.slider .label-no {
+  color: #888;
+  z-index: 2;
+  transition: color 0.3s;
+}
+.toggle-switch input:checked + .slider {
+  background-color: #4dc3fa;
+  border-color: #4dc3fa;
+}
+.toggle-switch input:checked + .slider .label-yes {
+  color: #fff;
+}
+.toggle-switch input:checked + .slider .label-no {
+  color: #fff;
+  opacity: 0.5;
+}
+.toggle-switch .slider:before {
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(36px);
+}
+
+/* Tamaño de letra del select de error crítico. Modifica font-size aquí para cambiar el tamaño del texto del select. */
+.select-error-critico {
+  font-size: 0.65rem;
+}
+
+/* Texto de ayuda */
+.form-text {
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #6c757d;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.vue-modal-content .modal-actions button {
+  min-width: 120px;
+}
+
+.modal-close-btn {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 6px;
+  margin-top: 2px;
+  transition: background 0.18s;
+  padding: 0;
+  cursor: pointer;
+}
+.modal-close-btn:hover {
+  background: #e6eaf0;
+}
+.modal-close-btn svg {
+  display: block;
+}
+
+/* Tamaño de fuente para el detalle de evaluación en los modales. Modifica font-size aquí para cambiar el tamaño del texto del detalle. */
+.detalle-evaluacion {
+  font-size: 0.72rem;
+  padding: 1.5rem;
+}
+
+.detalle-evaluacion td {
+  font-size: 0.9rem; /* Adjust this value as needed */
+}
+
+.modal-footer {
+  border-top: 1px solid #e5e5e5;
+} 

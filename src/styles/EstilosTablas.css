@@ -1,0 +1,102 @@
+/* Estilos para tablas personalizadas */
+.table th {
+  font-weight: 600;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  padding: 0.75rem 0.5rem;
+  background: #f8f9fa;
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.custom-table {
+  font-size: 0.8rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+  background: #fff;
+}
+
+.custom-table thead th {
+  background: #f8f9fa;
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+  font-weight: 600;
+}
+
+.custom-table tbody tr {
+  border-bottom: 1px solid #e3e6ea;
+  transition: background-color 0.2s ease;
+}
+
+.custom-table tbody tr:hover {
+  background: #f5faff !important;
+}
+
+.custom-table tbody td {
+  padding: 0.75rem 0.5rem;
+  vertical-align: middle;
+  border: none;
+}
+
+.custom-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.btn-group .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.75em;
+  font-size: 0.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table-responsive {
+    margin: 0 -1rem;
+  }
+  
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .btn-group .btn {
+    border-radius: 0.25rem !important;
+  }
+  
+  .custom-table {
+    font-size: 0.75rem;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.4em 0.6em;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-table {
+    font-size: 0.7rem;
+  }
+  
+  .custom-table th,
+  .custom-table td {
+    padding: 0.4rem 0.2rem;
+  }
+  
+  .btn-group .btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+  }
+} 

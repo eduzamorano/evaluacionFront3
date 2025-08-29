@@ -1,0 +1,40 @@
+.table-responsive {
+  overflow-x: auto;
+}
+
+#dataTable {
+  font-size: 0.85rem; /* Texto más pequeño para la tabla */
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#dataTable th,
+#dataTable td {
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+#dataTable th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #495057;
+  text-align: left;
+  max-width: 22ch; /* Límite de 22 caracteres */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#dataTable tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}

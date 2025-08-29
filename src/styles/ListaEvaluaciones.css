@@ -1,0 +1,73 @@
+.evaluacion-lista-pagina {
+  background: linear-gradient(120deg, #f8fafc 60%, #e2efd9 100%);
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+.pagination .page-link {
+  cursor: pointer;
+}
+
+.custom-table {
+  /* Add custom styles for the table here if needed */
+  font-size: 0.8rem; /* Adjust this value as needed */
+}
+
+.table-header-main {
+  background-color: var(--color-azul-corporativo);
+  color: var(--color-blanco);
+}
+
+.table-row:hover {
+  background-color: #f2f2f2; /* Light grey background on hover */
+}
+
+/* Estilo para filas con errores críticos */
+.error-critico-row {
+  background-color: #ffebee !important; /* Fondo rojo claro */
+  border-left: 4px solid #dc3545 !important; /* Borde izquierdo rojo */
+}
+
+.error-critico-row:hover {
+  background-color: #ffcdd2 !important; /* Fondo rojo más intenso al hacer hover */
+}
+
+.error-critico-row td {
+  color: #c62828; /* Texto en rojo oscuro para mejor contraste */
+  font-weight: 500;
+}
+
+/* Estilos para botones de acción */
+.btn-outline-success {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.btn-outline-success:hover:not(:disabled) {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-outline-success:disabled {
+  border-color: #6c757d;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Spinner para botones en loading */
+.spinner-border-sm {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* Style for the 'Ver detalle' button */
+.btn-outline-primary {
+  border-color: var(--color-azul-corporativo);
+  color: var(--color-azul-corporativo);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-azul-corporativo);
+  color: var(--color-blanco);
+} 

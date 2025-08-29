@@ -1,0 +1,28 @@
+.pagination .page-link {
+  cursor: pointer;
+}
+
+.custom-table {
+  /* Add custom styles for the table here if needed */
+  font-size: 0.8rem; /* Adjust this value as needed */
+}
+
+.table-header-main {
+  background-color: var(--color-azul-corporativo);
+  color: var(--color-blanco);
+}
+
+.table-row:hover {
+  background-color: #f2f2f2; /* Light grey background on hover */
+}
+
+/* Style for the 'Ver detalle' button */
+.btn-outline-primary {
+  border-color: var(--color-azul-corporativo);
+  color: var(--color-azul-corporativo);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-azul-corporativo);
+  color: var(--color-blanco);
+} 

@@ -1,0 +1,198 @@
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.table-responsive {
+  border-radius: 12px;
+  overflow-x: auto;
+  background: #f8fafc;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07);
+}
+.custom-table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.7rem;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.table-header-main {
+  background: linear-gradient(90deg, #b6d7a8 60%, #e2efd9 100%);
+  font-size: 0.9rem;
+  color: #222;
+  border-bottom: 2.5px solid #333;
+  letter-spacing: 0.5px;
+}
+.table-header-sub {
+  background: #e2efd9;
+  font-size: 0.7rem;
+  color: #333;
+  border-bottom: 2px solid #b6d7a8;
+}
+.bg-atributo {
+  background: #f0f4f8 !important;
+  font-weight: 600;
+  color: #2d5c3a;
+  border-right: 2.5px solid #b6d7a8 !important;
+}
+.table-row {
+  border-bottom: none !important;
+}
+.table-row td {
+  border-bottom: 1.5px solid #bfc9d1 !important;
+}
+.table-row:last-child td {
+  border-bottom: 0 !important;
+}
+.table-row:hover {
+  background: #f5faff !important;
+}
+.table th, .table td {
+  vertical-align: middle !important;
+  padding: 0.7rem 0.4rem;
+  border-color: #e3e6ea !important;
+}
+.table thead th {
+  font-weight: bold;
+  border-bottom: 2.5px solid #333;
+}
+.table-bordered {
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+}
+.border-dark {
+  border-color: #333 !important;
+}
+.form-select-sm {
+  min-width: 110px;
+  font-size: 0.98rem;
+}
+.explicativo-cell {
+  font-size: 0.82rem;
+  color: #555;
+  background: #f8fafc;
+  font-style: italic;
+  max-width: 480px;
+  min-width: 260px;
+  width: 30vw;
+  word-break: break-word;
+}
+@media (max-width: 900px) {
+  .container {
+    padding: 0.5rem;
+  }
+  .table th, .table td {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.15rem;
+  }
+  .custom-table {
+    font-size: 0.89rem;
+  }
+  .explicativo-cell {
+    font-size: 0.72rem;
+    max-width: 220px;
+    min-width: 120px;
+    width: 40vw;
+  }
+}
+.select-elegante {
+  border-radius: 1.2em !important;
+  background: #f4f7fa !important;
+  border: 1.5px solid #bfc9d1 !important;
+  box-shadow: 0 1px 4px 0 rgba(44,62,80,0.07);
+  color: #2d3a4a;
+  font-weight: 500;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  padding: 0.35em 1.2em 0.35em 0.7em !important;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select-elegante option {
+  background: #f8fafc;
+  color: #2d3a4a;
+  font-size: 0.98em;
+  padding: 0.5em 1em;
+  border-bottom: 1px solid #e3e6ea;
+}
+.select-elegante option:checked,
+.select-elegante option:focus {
+  background: #e2efd9;
+  color: #1a3a2d;
+  font-weight: 600;
+}
+
+/* Estilos para los modales (feedback/confirmación) */
+.vue-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(44, 62, 80, 0.35);
+  z-index: 1040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vue-modal-content {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 500px; /* Adjust max-width if needed */
+  width: 90%;
+  box-shadow: 0 8px 32px 0 rgba(44,62,80,0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.vue-modal-content .modal-header {
+    background-color: var(--color-azul-corporativo); /* Use corporate blue */
+    color: var(--color-blanco); /* Use white */
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.vue-modal-content .modal-title {
+    font-weight: 600;
+}
+
+.vue-modal-content .modal-body {
+  padding: 1rem 1.5rem; /* Reduced vertical padding */
+  flex-grow: 1;
+  overflow-y: auto; /* Add scrolling if content overflows */
+}
+
+.vue-modal-content .modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.vue-modal-content .modal-close-btn {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.vue-modal-content .modal-close-btn:hover {
+  background: #e6eaf0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .vue-modal-content {
+    max-width: 95%;
+  }
+  .vue-modal-content .modal-body, .vue-modal-content .modal-header, .vue-modal-content .modal-footer {
+    padding: 1rem; /* Further reduce padding on small screens */
+  }
+} 
