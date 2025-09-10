@@ -59,8 +59,8 @@
           <li class="page-item" :class="{ disabled: paginaActual === 1 }">
             <button class="page-link" @click="cambiarPagina(paginaActual - 1)" :disabled="paginaActual === 1">&laquo;</button>
           </li>
-          <li v-for="n in totalPaginas" :key="n" class="page-item" :class="{ active: paginaActual === n }">
-            <button class="page-link" @click="cambiarPagina(n)">{{ n }}</button>
+          <li v-for="(pagina, index) in paginasVisibles" :key="index" class="page-item" :class="{ active: paginaActual === pagina, disabled: pagina === '...' }">
+            <button class="page-link" @click="cambiarPagina(pagina)" :disabled="pagina === '...'">{{ pagina }}</button>
           </li>
           <li class="page-item" :class="{ disabled: paginaActual === totalPaginas }">
             <button class="page-link" @click="cambiarPagina(paginaActual + 1)" :disabled="paginaActual === totalPaginas">&raquo;</button>
@@ -112,6 +112,44 @@ export default {
     evaluacionesPaginadas() {
       const start = (this.paginaActual - 1) * this.tamanoPagina;
       return this.evaluacionesFiltradas.slice(start, start + this.tamanoPagina);
+    },
+    paginasVisibles() {
+      const paginas = [];
+      const maxBotones = 15; // Máximo de botones de página a mostrar (incluyendo elipsis)
+
+      if (this.totalPaginas <= maxBotones) {
+        for (let i = 1; i <= this.totalPaginas; i++) {
+          paginas.push(i);
+        }
+      } else {
+        paginas.push(1); // Siempre mostrar la primera página
+
+        let inicio = Math.max(2, this.paginaActual - 2);
+        let fin = Math.min(this.totalPaginas - 1, this.paginaActual + 2);
+
+        if (this.paginaActual <= 4) {
+          inicio = 2;
+          fin = maxBotones - 2;
+        } else if (this.paginaActual >= this.totalPaginas - 3) {
+          inicio = this.totalPaginas - maxBotones + 3;
+          fin = this.totalPaginas - 1;
+        }
+
+        if (inicio > 2) {
+          paginas.push('...');
+        }
+
+        for (let i = inicio; i <= fin; i++) {
+          paginas.push(i);
+        }
+
+        if (fin < this.totalPaginas - 1) {
+          paginas.push('...');
+        }
+
+        paginas.push(this.totalPaginas); // Siempre mostrar la última página
+      }
+      return paginas;
     }
   },
   watch: {
